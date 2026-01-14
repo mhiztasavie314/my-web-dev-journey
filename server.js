@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const dbAddress = 'mongodb://localhost:27017/myapp';
+const dbAddress = process.env.MONGO_URL || 'mongodb://localhost:27017/myapp';
 // Connect!
 mongoose.connect(dbAddress)
 .then(() => {
