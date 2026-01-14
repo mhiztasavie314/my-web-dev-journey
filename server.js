@@ -11,7 +11,7 @@ mongoose.connect(dbAddress)
 });
 const app = express();
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('assets'));
 const userSchema = new mongoose.Schema({
   name: String,
   role: String,
